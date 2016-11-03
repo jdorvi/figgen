@@ -1,0 +1,8 @@
+7
+Cedar Key,-83.03000,29.13302,LM,4,Black
+Clearwater Beach,-82.83205,27.97767,LM,4,Black
+St Petersburg,-82.62680,27.75980,LM,4,Black
+Old Port Tampa,-82.55407,27.85838,LM,4,Black
+McKay Bay Entrance,-82.42583,27.91316,LM,4,Black
+Port Manatee,-82.56520,27.63860,LM,4,Black
+Naples,-81.82974,26.12857,LM,4,Black

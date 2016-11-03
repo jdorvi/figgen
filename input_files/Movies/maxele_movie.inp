@@ -3,34 +3,34 @@ FOR BEST RESULTS, PLEASE KEEP COMMENTS OUT OF THE FIRST 50 CHARACTERS ON EACH LI
 4                                                  ! Level of screen output.
 /usr/lib/gmt/bin/                                  ! Path where GMT executables are located.
 /usr/bin/                                          ! Path where GhostScript executable is located.
-T9/                                                ! Path where temporary files will be created.
-DSPRatmaxele                                       ! Alphanumeric label for these plots.
-1, Wave Dispersion at MaxEle (degrees)             ! Plot label flag and plot label.
+T1/                                                ! Path where temporary files will be created.
+maxele                                             ! Alphanumeric label for these plots.
+1,Water Elevation (meters above MSL)               ! Plot label flag and plot label.
 0                                                  ! Time bar flag: 0 to ignore, 1 to plot time bar.
--85.65                                             ! Lat/lon box.
--80.65                                             !
-24.25                                              !
-28.25                                              !
+-86.11                                             ! Lat/lon box.
+-81.49                                             !
+25.69                                              !
+29.95                                              !
 fort.14                                            ! Name of grid file.
 0                                                  ! Plot grid flag: 0 to ignore, 1 to plot triangular grid on figure.
 PARAMETERS FOR CONTOURS:
 1                                                  ! Contour fill flag: 0 to ignore, 1 to plot filled contours, 2 to plot differences.
 0                                                  ! Contour lines flag: 0 to ignore, 1 to plot contour lines, 2 to plot differences.
-DSPRatmaxele.63                                    ! Name(s) of file(s) to use for contours.
+maxele.63                                          ! Name(s) of file(s) to use for contours.
 ADCIRC-OUTPUT                                      ! Contour file format flag: ADCIRC-OUTPUT, GRID-BATH/SIZE/DECOMP-#, 13-MANNING/CANOPY/TAU0/EVIS/WIND-REDUCTION(-#).
 1.00000                                            ! Unit conversion factor for contours.
-deg                                                ! Alphanumeric label for units after conversion.
+m                                                  ! Alphanumeric label for units after conversion.
 SMS                                                ! Color palette flag: RGB, SMS(+INTERVALS), CPT(+INTERVALS).
 Default2.pal                                       ! Name of SMS color palette.
 DEFAULT                                            ! Color lines flag: DEFAULT, CONTOUR-LINES, GRID-BATH/SIZE/DECOMP-#.  Requires GMT4.3.0.
-0,360                                              ! Minimum,maximum in contour range (or FIND to determine from file).
-1.0                                                ! Interval in contour range.
+0.00,5.0                                           ! Minimum,maximum in contour range (or FIND to determine from file).
+0.10                                               ! Interval in contour range.
 10                                                 ! Number of times to split contour interval (for smoother plots).
-00                                                 ! Label every xth contour line on the plot (or 0 for no labels).
+1                                                  ! Label every xth contour line on the plot (or 0 for no labels).
 0.5                                                ! Require contour line labels to be more than x inches apart.
 0                                                  ! Rotation angle for contour line labels (or n for normal or p for parallel.)
 8                                                  ! Font size for contour line labels.
-60                                                 ! Label the scale at intervals of x.
+1.0                                                ! Label the scale at intervals of x.
 0.25                                               ! Width (inches) of scale.
 PARAMETERS FOR PARTICLES:
 0                                                  ! Particle flag: 0 to ignore, N to plot every Nth particle in the file.
@@ -49,9 +49,9 @@ FIND                                               ! Magnitude of vector to show
 PARAMETERS FOR OVERALL PLOT(S):
 0,Brown                                            ! Boundaries flag: 0 to ignore, 1 to plot roads/levees from grid.
 0,White,2,2                                        ! Coastline flag: 0 to ignore, 1 to plot coastline with color, resolution (1[Least]-4[Most]), water bodies (1[Least]-4[Most]).
-0,Black,                                           ! Dots/lines flag: 0 to ignore, 1 to plot unconnected dots, 2 to plot connected line segments from an external file.
-0,labels_SWFL.txt                                  ! Labels flag: 0 to ignore, 1 to plot labels from external file.
-1,TL,2.0,RAMPP_Logo.eps                            ! Logo flag: 0 to ignore, 1 to plot logo at position (TL,TR,BL,BR) and width (inches) from an external file.
+0,Black,IkeTrack.txt                               ! Dots/lines flag: 0 to ignore, 1 to plot unconnected dots, 2 to plot connected line segments from an external file.
+0,labels_WFL.txt                                   ! Labels flag: 0 to ignore, 1 to plot labels from external file.
+0,TR,2.0,RAMPP_Logo.eps                            ! Logo flag: 0 to ignore, 1 to plot logo at position (TL,TR,BL,BR) and width (inches) from an external file.
 0,SatelliteImages.txt                              ! Background images: 0 to ignore, 1 to plot geo-referenced images from a list in an external file.
 6.00                                               ! Width (inches) of plot.
 0.25                                               ! Distance (inches) between edge of plot and contour scale, vector scale, time bar, plot label, etc.
@@ -59,8 +59,8 @@ PARAMETERS FOR OVERALL PLOT(S):
 2.00                                               ! Annotate on the border at every xth degree.
 1                                                  ! Image trim flag: 0 to ignore, 1 to trim image close to plot.
 300                                                ! Resolution (dpi) of images.
-JPG,PDF                                            ! Raster file format(s): PNG, JPG, BMP, TIFF, EPS, PDF.
+JPG                                                ! Raster file format(s): PNG, JPG, BMP, TIFF, EPS, PDF.
 0,75,2,20050828120000                              ! Flag for Google KMZ file, transparency (0-100) of images, number of layers, and time stamp of first record in 63 file for animation.
 0,0                                                ! Flag for georeferencing: (0 to ignore, 1 for images, 2 for zipped images), and lowermost layer (or 0 to optimize).
-1                                                  ! Number of records for which to produce images (or 0 for all).
+0                                                  ! Number of records for which to produce images (or 0 for all).
 1                                                  ! List of records (ignored if the number of records is 0).
